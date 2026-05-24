@@ -1,48 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Moon Realty</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Moon Realty</title>
 
-    .hero {
-      padding: 100px 20px;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body{
+background:#0b1120;
+color:white;
+}
 
-    p {
-      font-size: 20px;
-      color: #cbd5e1;
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:#111827;
+position:sticky;
+top:0;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 30px;
-      background: gold;
-      color: black;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-  </style>
+.logo{
+font-size:28px;
+font-weight:bold;
+color:gold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:16px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:22px;
+color:#d1d5db;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:gold;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin:70px 0 30px;
+}
+
+.properties{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+padding:0 8% 80px;
+}
+
+.card{
+background:#1e293b;
+width:320px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#cbd5e1;
+margin-bottom:10px;
+}
+
+footer{
+background:#111827;
+text-align:center;
+padding:30px;
+color:#94a3b8;
+}
+</style>
 </head>
 
 <body>
-  <div class="hero">
-    <h1>Moon Realty 🌙</h1>
-    <p>Luxury Real Estate Platform</p>
-    <a class="btn" href="#">Explore Properties</a>
-  </div>
+
+<header>
+<div class="logo">Moon Realty 🌙</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Properties</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Luxury Real Estate</h1>
+<p>Find Your Dream Property Worldwide</p>
+<a class="btn" href="#">Explore Properties</a>
+</div>
+</section>
+
+<h2 class="section-title">Featured Properties</h2>
+
+<section class="properties">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Luxury Villa</h3>
+<p>California, USA</p>
+<p>$3,200,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Modern House</h3>
+<p>New York, USA</p>
+<p>$2,500,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Luxury Apartment</h3>
+<p>London, UK</p>
+<p>$1,850,000</p>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Moon Realty — Luxury Real Estate Company
+</footer>
+
 </body>
 </html>
