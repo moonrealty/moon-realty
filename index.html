@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Moon Realty</title>
+<title>Moon Realty Homes</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0b1120;
+background:#050505;
 color:white;
 }
 
@@ -23,63 +24,79 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px 8%;
-background:#111827;
+background:rgba(0,0,0,.9);
 position:sticky;
 top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,215,0,.2);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:gold;
+letter-spacing:1px;
 }
 
 nav a{
-color:white;
+color:#eee;
 text-decoration:none;
-margin-left:25px;
+margin-left:30px;
 font-size:16px;
+transition:.3s;
+}
+
+nav a:hover{
+color:gold;
 }
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80');
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 }
 
 .hero-content h1{
-font-size:60px;
-margin-bottom:15px;
+font-size:68px;
+margin-bottom:20px;
+color:gold;
 }
 
 .hero-content p{
-font-size:22px;
+font-size:24px;
 color:#d1d5db;
-margin-bottom:30px;
+margin-bottom:35px;
+max-width:700px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
+padding:16px 35px;
 background:gold;
 color:black;
 font-weight:bold;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
-margin:70px 0 30px;
+font-size:42px;
+margin:90px 0 40px;
+color:gold;
 }
 
 .properties{
@@ -91,10 +108,17 @@ padding:0 8% 80px;
 }
 
 .card{
-background:#1e293b;
+background:#111;
 width:320px;
 border-radius:20px;
 overflow:hidden;
+box-shadow:0 0 25px rgba(255,215,0,.08);
+transition:.3s;
+border:1px solid rgba(255,215,0,.15);
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .card img{
@@ -109,6 +133,7 @@ padding:20px;
 
 .card h3{
 margin-bottom:10px;
+color:gold;
 }
 
 .card p{
@@ -116,11 +141,60 @@ color:#cbd5e1;
 margin-bottom:10px;
 }
 
-footer{
-background:#111827;
+.about{
+padding:100px 10%;
 text-align:center;
-padding:30px;
-color:#94a3b8;
+max-width:1000px;
+margin:auto;
+}
+
+.about p{
+font-size:20px;
+line-height:1.8;
+color:#d1d5db;
+margin-top:20px;
+}
+
+.features{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+padding:20px 8% 100px;
+}
+
+.feature-box{
+background:#111;
+padding:35px;
+width:280px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,215,0,.15);
+}
+
+.feature-box h3{
+color:gold;
+margin-bottom:15px;
+}
+
+.contact{
+text-align:center;
+padding:90px 20px;
+background:#0c0c0c;
+}
+
+.contact p{
+margin:15px 0;
+font-size:18px;
+color:#d1d5db;
+}
+
+footer{
+background:black;
+text-align:center;
+padding:35px;
+color:#888;
+border-top:1px solid rgba(255,215,0,.15);
 }
 </style>
 </head>
@@ -141,8 +215,8 @@ color:#94a3b8;
 <section class="hero">
 <div class="hero-content">
 <h1>Luxury Real Estate</h1>
-<p>Find Your Dream Property Worldwide</p>
-<a class="btn" href="#">Explore Properties</a>
+<p>Exclusive Luxury Homes & Premium Properties Around The World</p>
+<a class="btn" href="#">Explore Luxury Homes</a>
 </div>
 </section>
 
@@ -151,36 +225,72 @@ color:#94a3b8;
 <section class="properties">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80">
-<div class="card-content">
-<h3>Luxury Villa</h3>
-<p>California, USA</p>
-<p>$3,200,000</p>
-</div>
-</div>
-
-<div class="card">
 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
 <div class="card-content">
-<h3>Modern House</h3>
-<p>New York, USA</p>
-<p>$2,500,000</p>
+<h3>Luxury Villa</h3>
+<p>Beverly Hills, California</p>
+<p>$4,200,000</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80">
 <div class="card-content">
-<h3>Luxury Apartment</h3>
-<p>London, UK</p>
-<p>$1,850,000</p>
+<h3>Modern Mansion</h3>
+<p>Miami, Florida</p>
+<p>$5,900,000</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Penthouse Suite</h3>
+<p>New York City</p>
+<p>$8,500,000</p>
 </div>
 </div>
 
 </section>
 
+<section class="about">
+<h2 class="section-title">About Moon Realty</h2>
+<p>
+Moon Realty specializes in luxury real estate and premium investment properties.
+We help clients discover dream homes, exclusive villas, and world-class opportunities
+across the globe.
+</p>
+</section>
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<section class="features">
+
+<div class="feature-box">
+<h3>Luxury Listings</h3>
+<p>Exclusive premium homes curated for elite buyers.</p>
+</div>
+
+<div class="feature-box">
+<h3>Trusted Experts</h3>
+<p>Professional guidance from experienced agents.</p>
+</div>
+
+<div class="feature-box">
+<h3>Worldwide Access</h3>
+<p>Luxury opportunities across global destinations.</p>
+</div>
+
+</section>
+
+<section class="contact">
+<h2 class="section-title">Contact Moon Realty</h2>
+<p>Email: info@moonrealtyhomes.com</p>
+<p>Luxury Real Estate Company 🌙</p>
+</section>
+
 <footer>
-© 2026 Moon Realty — Luxury Real Estate Company
+© 2026 Moon Realty Homes — Premium Luxury Real Estate
 </footer>
 
 </body>
